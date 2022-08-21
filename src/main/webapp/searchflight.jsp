@@ -50,13 +50,13 @@
 				<h3>Search a flight!</h3>
 				<br>
 				<form action="flights.jsp" method="post">
-					<label>Departing from?</label><input type="text" name="depart" value="New York"><br>
-					<label>Going to?</label><input type="text" name="arrive" value="San Francisco"><br> 
+					<label>Departing from?</label><input type="text" name="depart" ><br>
+					<label>Going to?</label><input type="text" name="arrive" ><br> 
 					<span class="form_bottom"> 
 						<label>Number of Passengers</label>
 						<select class="form-select" aria-label="Number of Passengers" name="capacity" id="capacity" style="width: auto;">
 							<option selected>Number of Passengers</option>
-							<option value="1" selected="selected">1</option>
+							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -68,7 +68,7 @@
 							<option value="8">10</option>
 						</select><br>
 					<label for="date" class="visually-hidden">Departure Date</label>
-					<input class="form-control" style="width: auto;" id="date" name="date" placeholder="MM/DD/YYYY" type="text" aria-label="date" aria-describedby="addon-wrapping" value="09/30/2022" /> <br>
+					<input class="form-control" style="width: auto;" id="date" name="date" placeholder="MM/DD/YYYY" type="text" aria-label="date" aria-describedby="addon-wrapping" /> <br>
 					</span><br>
 					<span class="form_btn">
 						<button class="btn" type="submit" style="margin: 0 auto; width: 26%; margin: 10px 65px 0 0;">Search</button>

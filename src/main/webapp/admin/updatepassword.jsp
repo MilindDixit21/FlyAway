@@ -11,10 +11,12 @@
 <title>Change password</title>
 <link href="../css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body class="updatepassword">
+<jsp:include page="adminmenu.jsp"></jsp:include>
 
 		<%
 		String error = request.getParameter("error");
+		String success = request.getParameter("success");
 		if(error!=null){
 		%>
 		<section class="page-section bg-light" id="updatepwd">
@@ -34,16 +36,25 @@
 		</div>
 	</section>
 <%
-}
+}if(success!=null){
 %>
+<section class="page-section bg-light" id="updatepwd">
+		<div class="alert alert-info" role="alert">
+			password has been updated!
+			<%
+			}
+%>
+</div>
+</section>
+
 
 <table class="container table_detail roundedCorner box_shadow">
 		<tr>
 			<td>
-				<h3>Change password</h3>
+				<h3>Update password</h3>
 				<br>
-				<form action="updatepwd" method="post">
-				 <label>Email Id :</label><input type="text" name="email" value="<%= session.getAttribute("customer_email")%>" readonly="readonly"><br>
+				<form action="../updatepass" method="post">
+				 <label>Email Id :</label><input type="text" name="email" value="<%= session.getAttribute("customer_email")%>" id="readOnlyText" readonly="readonly"><br>
 				<label>old password</label><input type="text" name="oldpwd"><br>
 				<label>new Password:</label><input type="text" name="newpwd"><br> 
 				<span class="form_btn">

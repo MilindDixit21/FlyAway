@@ -18,7 +18,7 @@ import com.flyaway.util.HibernateUtil;
 /**
  * Servlet implementation class ChangePassword
  */
-@WebServlet("/updatepwd")
+@WebServlet("/updatepass")
 public class ChangePassword extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,7 +35,7 @@ public class ChangePassword extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		PrintWriter out = response.getWriter();
 		
 		String oldpwd = request.getParameter("oldpwd");
 		String newpwd = request.getParameter("newpwd");
@@ -52,28 +52,24 @@ public class ChangePassword extends HttpServlet {
 	    		if ( !FormValidator.isPassword(newpwd) ) {
 	    			err += "err02";
 	        	}
-	    		response.sendRedirect("updatepassword.jsp?error="+err);
+	    		response.sendRedirect("admin/updatepassword.jsp?error="+err);
 			} else {
 				Session se = HibernateUtil.getsessionFactory().openSession();
 				
-				String custId = (String) request.getSession().getAttribute("customer_Id");
+				int custId = (int) request.getSession().getAttribute("customer_Id");
 				Customer user = se.load(Customer.class, custId);
 				
-				if(user.getPassword() == oldpwd) {
+				if(user.getPassword().equalsIgnoreCase(oldpwd) ) {
 				user.setPassword(newpwd);
-
 				Transaction transaction = se.beginTransaction();
 				se.save(user);
 				transaction.commit();
-				RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
-				rd.include(request, response);
-				PrintWriter out = response.getWriter();
-				out.print("<span class='alert alert-info'>Password has changed! </span>");
+				response.sendRedirect("admin/dashboard.jsp?success=1");
+				
 				}
-				if(user.getPassword()!= oldpwd) {
+				else {
 					RequestDispatcher rd = request.getRequestDispatcher("updatepassword.jsp?error=0");
 					rd.include(request, response);
-					PrintWriter out = response.getWriter();
 					out.print("<span class='alert alert-danger'>Password does not match </span>");
 					//response.sendRedirect("updatepassword.jsp?error="+err);
 				}

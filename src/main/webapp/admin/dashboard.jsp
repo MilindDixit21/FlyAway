@@ -32,10 +32,26 @@ body { background: #0d3188;}.table_detail {background: #fff;}
 	request.getSession().setAttribute("customer_email", c.getEmail());
 %>
 
+<%
+	String success = request.getParameter("success");
+	if(success!=null){
+%>
+		<section class="page-section bg-light" id="updatepwd">
+		<div class="alert alert-info" role="alert">
+			password has been updated!
+			</div>
+		</section>
+<%
+	}
+%>
+	
+
+
+
  <table class="table table-striped table-hover table_detail roundedCorner cust_info">
 								<tr>
 								<td>
-								<a href="updatepassword.jsp">change password</a>
+								<a href="updatepassword.jsp" class="pagelink">change password</a>
 								<h3 class="text-primary mt-0">Profile</h3>
 								    <div><span class="sub">Name:</span><span class="super"><%=c.getFirstName() %></span></div>
 								    <div><span class="sub">Last Name:</span><span class="super"><%=c.getLastName() %></span></div>

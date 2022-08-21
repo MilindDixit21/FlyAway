@@ -7,7 +7,7 @@
 body {font-family: 'Oxygen', sans-serif;margin:0;}
 #close{ position: absolute; font-size: 1.4em; font-weight: 800; background: red;color: #fff; border-radius: 30px;line-height: 0.9em; width: 20px;height: 20px; padding: 15px 16px;right: 20px;top: 20px;}
 .hidden{visibility:hidden!important; display:none!important;}
-#readOnlyText, #readOnlyText:active, #readOnlyText:hover { background: #edf2f9; border: 1px solid #d1e1e9!important; outline: none!important;}
+#readOnlyText, #readOnlyText:active, #readOnlyText:hover { background: #edf2f9; border: 1px solid #d1e1e9!important; outline: none!important;color: #5f6368;  text-shadow: 1px 1px white;}
 
 .container_wrapper{ padding: 0 0 15px; min-height: 100%; margin: 0 auto -50px;}
 
@@ -133,6 +133,7 @@ span.form_btn{ margin-left: 200px;}
 .footer p {margin:0; padding: 12px 0 0; text-align: center; color: #fff; font-size: 0.9em;}
 
 #bookaflight .table_detail {background:#fff;}
+#bookaflight .container_wrapper {padding:0;}
 
 
 body#flightSearchResult {background: #0d3188;}
@@ -204,9 +205,19 @@ a.login_link:hover, a.login_link:active{ color:#004499;}
 #listallflights td:first-child { border-radius: 0 0 0 9px; border-left: none;  border-top: none;}
 #listallflights td:last-child { border-radius: 0 0 9px 0; border-right: none;}
 
-#listallflights td a.pagelink{float:right;color:green;background: none;padding: 0 25px 0 0;font-style: italic;font-size: 0.9em;}
-#listallflights td a.pagelink:hover{color:lightgreen;}
+#listallflights td a.pagelink{float:right;color:green;background: none;padding: 0 25px 0 0;font-style: italic;font-size: 1em;}
+#listallflights td a.pagelink:hover{color:#30c430;}
 
+
+#dashboard td a.pagelink{float:right;color:green;background: none;padding: 0 25px 0 0; font-size: 1em;}
+#dashboard td a.pagelink:hover{color:#30c430;}
+#dashboard td a.pagelink:before {
+    content: "\f044";
+    font-family: 'FontAwesome';
+    color: #235abf;
+    padding: 0 4px;
+    font-size: 1.3em;
+}
 
 span.divider {
     position: relative;
