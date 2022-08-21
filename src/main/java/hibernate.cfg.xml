@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>       
+  <session-factory>
+  
+  
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/flyaway</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">Welcome1</property>
+    
+    <!-- to tell hibernate to use the table -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    
+    	<!-- to see what is happening on data -->	
+	<property name="show_sql">true</property>
+	
+    <!-- though we defined it as @Entity in persistent class, need to map it to tell HB to use it entity/persistent class -->
+      
+	<mapping class="com.flyaway.table.FlightRegistry"/>
+	<mapping class="com.flyaway.table.Customer"/>
+	<mapping class="com.flyaway.table.Flights"/>
+	<mapping class="com.flyaway.table.Payment"/>
+	<mapping class="com.flyaway.table.Admin"/>
+
+  </session-factory>
+</hibernate-configuration>

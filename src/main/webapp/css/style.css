@@ -1,0 +1,293 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+
+
+body {font-family: 'Oxygen', sans-serif;margin:0;}
+#close{ position: absolute; font-size: 1.4em; font-weight: 800; background: red;color: #fff; border-radius: 30px;line-height: 0.9em; width: 20px;height: 20px; padding: 15px 16px;right: 20px;top: 20px;}
+.hidden{visibility:hidden!important; display:none!important;}
+#readOnlyText, #readOnlyText:active, #readOnlyText:hover { background: #edf2f9; border: 1px solid #d1e1e9!important; outline: none!important;}
+
+.container_wrapper{ padding: 0 0 15px; min-height: 100%; margin: 0 auto -50px;}
+
+
+a.nav-link:after {
+    content: "";
+    border-bottom: 2px solid midnightblue;
+    width: 1%;
+    display: block;
+    margin: 5px 0 0px 0;
+}
+a.nav-link:hover:after {
+    width: 100%;
+    border-bottom-color: #4aca00;
+    -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+/*********menu**************/
+nav.navbar {
+    width: 100%;
+    display: inline-block;
+    background: midnightblue;
+    margin-bottom:20px;
+}
+nav.navbar.admin_menu{
+	background:#1b50b1;
+}
+nav.navbar.admin_menu.system{
+	background:#0f1d3c;
+}
+ul.navbar-nav {
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+nav.navbar.admin_menu ul.navbar-nav{ text-align:left; float: left; margin-left: 25px;}
+
+li.nav-item {
+    display: inline-block;
+    padding: 15px 15px;
+}
+a.nav-link {
+	color: #f3f3f3;
+    line-height: 1em;
+    font-size: 1em;
+    text-decoration:none;
+}
+a.nav-link:hover, a.nav-link:active {
+	color: #fff;
+	text-decoration:none;
+}
+.alert.alert-danger {
+    text-align: center;
+    color: red;
+    width: 48%;
+    border: 1px solid #fdd1d1;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: block;
+    background: #fffaf6;
+}
+.alert.alert-info {
+    text-align: center;
+    color: Green;
+    width: 48%;
+    border: 1px solid #fbf1b2;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: block;
+    background: #fffdf0;
+}
+
+/*********menu**************/ 	
+
+a, a:hover, a:active{text-decoration:none;}
+
+.table_dark {background: #2d3a83; color: #fff;}
+
+.table_detail {/*background:#fff none;*/ border-collapse:separate;border-spacing: 0; border:solid black 1px;  width: 50%;margin: 0 auto 5px;}
+.table_detail td {padding: 30px 20px 30px; line-height: 25px;}
+.table_detail td h3 {padding-bottom: 5px;border-bottom: 1px solid;margin-top:0;}
+.table_detail span.sub {float:left; font-size: 0.9em; min-width: 200px;}
+.table_detail span.super {float: left; display: block; font-size: 1.0em; margin-top: 0px;}
+
+span.super {float: left; display: block; font-size: 1.3em; margin-top: 5px;}
+span.sub {display: block; font-size: 0.6em; text-indent: 5px;}
+
+.box_shadow{box-shadow: 2px 3px 6px #0f2b5a;}
+.roundedCorner {border-radius:10px;}
+.bold_txt {font-weight:bold; font-size: 1.1em; }
+.text-center {text-align: center;}
+.gray_border {border: 1px solid #c0cad5;}
+.gray_border:hover {border: 1px solid #999;}
+
+.btn { background-color: #0661d7; color: #ffffff; font-weight: bold; padding: 12px 24px;border:none; outline:none; border-radius: 10px; font-size: 1em;}
+.btn:hover {background: #004499}
+.btn_primary {background: #00aa00; color: #fff; border-radius: 20px;}
+.btn_primary:hover {background: #019b01;}
+
+
+a.btn {float:none;background: none; color: #00aa00; text-decoration: none;}
+a.btn:hover {background: none; color: #006600; text-decoration: none;}
+
+.table_detail input[type="text"], .table_detail input[type="password"], .table_detail select.form-select, .table_detail input.form-control{border: 1px solid rgb(192, 202, 213);font-size: 0.9em; padding: 10px; margin: 0  3px 5px 0; width: 50%; border-radius: 10px;}
+.table_detail select.form-select{width: 53%;}
+.table_detail label{ width: 190px; display: inline-block;}
+
+span.form_bottom, span.form_btn{display:inline-block; width:100%;}
+span.form_btn{ margin-left: 200px;}
+
+.home_container { background: url(../images/bg.jpg) no-repeat center center fixed;  -webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;  background-size: cover;  padding: 0px;  min-height: 100%;  margin: 0 auto -50px;  }
+.home_container .col {position: absolute;bottom: 20%; width: 100%;}
+.home_container h3 {font-size: 3em;color: white; margin-bottom: 30px;text-shadow: 2px 2px 3px #000; letter-spacing: 20px;}
+.home_container a.btn {background: #fff; border: 1px solid darkseagreen; color:#000;}
+
+.footer, .push {  height: 50px; }
+.footer {background:#021d5d; }
+.footer p {margin:0; padding: 12px 0 0; text-align: center; color: #fff; font-size: 0.9em;}
+
+#bookaflight .table_detail {background:#fff;}
+
+
+body#flightSearchResult {background: #0d3188;}
+#flightSearchResult .table_detail{background:#fff;}
+#flightSearchResult .table_detail:hover { background: #eff6ff;}
+#flightSearchResult .col-left, #flightSearchResult .col-right {float:left; padding: 5px 20px;}
+#flightSearchResult .col-left {padding: 5px 20px; font-size: 0.9em;}
+#flightSearchResult .col-right {font-size: 1.1em; padding:30px 25px 0;text-transform: capitalize;float:left;}
+#flightSearchResult .date {float:right; padding:30px 25px 0;font-size: 0.8em;font-weight: 600;color: #707070;}
+#flightSearchResult p.airline_name{font-size:1.0em; margin: 0; padding: 0;font-weight: 600;}
+#flightSearchResult .table_detail {margin-bottom:10px;}
+#flightSearchResult .table_detail td.price { width: 25%;border-left: 1px dotted; text-align:center;font-size: 1.4em;}
+
+#flightSearchResult .table_detail td.price a.btn:before {
+    font-family: fontawesome;
+    content: "\f155";
+    font-size: 0.5em;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -4px;
+}
+#flightSearchResult .table_detail td {padding-left:0; padding-right:0;}
+/*#flightSearchResult .box_shadow { box-shadow: 1px 1px 4px #d9d9da;}*/
+#flightSearchResult hr { width: 100%; float: left; border: none;border-bottom: 1px solid #e5e4e4;}
+
+.fair_details div {	float: left; clear: both; margin: 4px 0;}
+.fair_details .fair_details_bottom {float: right;margin-top: 10px; clear: both;width: 100%;}
+.fair_details_pay{border-top: 1px dotted #999999; border-bottom: 1px dotted #999999; width: 100%; padding: 10px 0;}
+.fair_details .fair_details_pay span.sub, .fair_details .fair_details_pay span.super{color: #f6f6f6; font-size: 1.1em; font-weight: 600;padding: 10px 0;}
+.fair_details .fair_details_bottom {float: right;margin-top: 10px; clear: both;width: 100%;}
+
+
+.ticket_wrapper {border: 3px dashed #d7e6f4; border-top: 3px dashed #d7e6f4; margin-bottom: 1px; padding: 0; background: #fbfcff; position: relative; overflow: hidden;}
+.ticket_wrapper:before { content: "\f072"; font-family: fontawesome; font-size: 29em; position: absolute; color: #e7ebf5; display: block; margin-top: 30%; margin-left: 49%; z-index: 0;}
+.ticket_content { position: relative; text-transform: capitalize; padding: 23px 5px 20px 20px;}
+.ticket_wrapper span.label { font-style: italic; font-size: 0.8em; font-weight: 600; color: #4b4b4b; padding-right: 23px;}
+.ticket_header {position: relative;  background: #2d3a83;  padding: 10px 20px;}
+.ticket_header .bold_txt { text-transform: uppercase; color: #ffffff; font-size: 1.1em; line-height: 2.2em;}
+.ticket_header span.label_head { display: inline-block; text-align: right; width: 75%; font-style: italic; text-transform: capitalize; color: #ffffff; font-size: 1.2em;}
+
+.ticket_content span.label { position: relative; display: inline-block;}
+.ticket_content span.label:after { content: ""; border-bottom: 1px dashed #e1e1e1; display: inline-block; position: absolute; width: 350%; left: -3px; bottom: 2px;}
+
+.cust_info div {	float: left; clear: both; margin: 4px 0;}
+
+.creditcard_details { background:#fff none;}
+.pops { display:none; height:90%; width:100%; padding:10% 0 0; background-color:#2d3a83; position:fixed; z-index:1; top:0; cursor:pointer;}
+.hideform { display: none;}
+
+
+.confirmation p.small {font-size: 0.9em;margin: -5px 0 20px;padding: 0;color: #6c6b6b;}
+
+.navbar a.welcome {float: right;padding: 13px 30px 0 0;margin-right: 25px; z-index: 1; font-size: 1.2em; font-weight: 500;color: #11d904; }
+
+nav.navbar.admin_menu a.welcome {color:#fff;}
+nav.navbar.admin_menu a.welcome:hover {color:#f1f1f1;}
+
+
+section#register button {min-width: 130px; margin-top: 20px; }
+a.login_link { font-weight: 600; color:#0661d7; text-decoration:none;}
+a.login_link:hover, a.login_link:active{ color:#004499;} 
+
+#listallflights .table_detail {padding-bottom: 30px;}
+#listallflights td {padding: 15px 20px; border: 0.5px dashed #f5f5f5; margin: 0; }
+#listallflights td a {background: #b51717;padding: 2px 30px;color: #fff;text-decoration: none; }
+#listallflights td a:hover {background:#e31d1d;}
+#listallflights .tbl_header td {background: #0f4a96; color: #fff;font-weight: 600; border-color:#c6c6c6; border-radius: 0!important; }
+
+#listallflights td:first-child { border-radius: 0 0 0 9px; border-left: none;  border-top: none;}
+#listallflights td:last-child { border-radius: 0 0 9px 0; border-right: none;}
+
+#listallflights td a.pagelink{float:right;color:green;background: none;padding: 0 25px 0 0;font-style: italic;font-size: 0.9em;}
+#listallflights td a.pagelink:hover{color:lightgreen;}
+
+
+span.divider {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    line-height: 0px;
+    padding:0 5px;
+    margin:0 5px;
+}
+span.divider:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 3px solid #dfe4ea;
+    height: 3px;
+    width: 75%;
+    line-height: 0;
+    top: 7px;
+}
+.fa-long-arrow-right{
+	-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.fa-long-arrow-right:before {
+    content: "\f072";
+    color: #0661d7;
+    
+}
+
+.ui-widget-header, .ui-datepicker-title{background-image:none!important; background-color:#6580a2!important}
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+    background:#846733;  
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	font-size:1em!important;
+	text-align: center;
+    color:#FFFFFF;
+    background:#4b7fb0;  
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .7em;
+	border-collapse: collapse;
+    font-family:verdana;
+	margin: 0 0 .4em;
+    color:#000000;
+    background:#fcfcfc;    
+}
+.ui-datepicker td {
+
+	border: 0;
+	padding: 1px;
+
+    
+}
+
+.ui-datepicker th { font-size: 0.9em!important;}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .8em;
+	text-align: right;
+	text-decoration: none;
+}
+
+@media print {
+  .noPrint{
+    display:none;
+  }
+  .table_detail{width:100%;border:none;}
+  .box_shadow {box-shadow: none;}
+}
+.print{float: right; margin-top: -51px; color: #5a5a5a; font-size: 1.5em; margin-right: 7px; outline: none;}
+
+
