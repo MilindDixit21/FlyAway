@@ -11,7 +11,7 @@
 <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body id="customerlogin">
+<body id="customerlogin" class="bg_darkBlue">
 
 	<jsp:include page="globalmenu.jsp"></jsp:include>
 
@@ -33,6 +33,11 @@
 			Password has invalid characters or is blank.<br>
 			<%
 			}
+			if(error.indexOf("03")>=0){
+			%>
+			Invalid username or password<br>
+			<%
+			}
 			%>
 		</div>
 	</section>
@@ -40,7 +45,7 @@
 }
 %>
 
-	<table class="container table_detail roundedCorner box_shadow">
+	<table class="container table_detail roundedCorner box_shadow bg_white">
 		<tr>
 			<td>
 				<h3>Login</h3>

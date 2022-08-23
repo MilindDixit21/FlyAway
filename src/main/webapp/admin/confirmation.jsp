@@ -43,14 +43,14 @@
  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body id="page-top">
+<body id="page-top" class="bg_darkBlue">
 
 <jsp:include page="adminmenu.jsp"></jsp:include>
 	
 	
 <div class="admin_confirmatin_wrap">
         <section class="page-section bg-light" id="register">
-	           <table class="table_detail roundedCorner box_shadow confirmation"> <tr><td>
+	           <table class="table_detail roundedCorner box_shadow confirmation bg_white"> <tr><td>
 	                <h3 class="text-primary font-weight-bold noPrint">Booking Confirmation</h3>
 	                <p class="small noPrint"> Have your boarding pass in hand before you get to the airport</p>
 	               	<span>

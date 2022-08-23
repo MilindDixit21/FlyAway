@@ -24,7 +24,7 @@
 
 
 </head>
-<body id="page-top">
+<body id="page-top" class="bg_darkBlue">
 <div class="container_wrapper">
 	<jsp:include page="globalmenu.jsp"></jsp:include>
 
@@ -109,7 +109,7 @@
 		//out.print("f:"+request.getSession().getAttribute("flightid")+"-c:"+request.getSession().getAttribute("capacity"));
 		%>
 	<!-- Customer Registration -->
-	<table class="table_detail roundedCorner box_shadow">
+	<table class="table_detail roundedCorner box_shadow bg_white">
 		<tr>
 			<td>
 				<section class="page-section bg-light" id="register">

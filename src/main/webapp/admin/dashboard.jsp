@@ -1,3 +1,9 @@
+<%@page import="java.util.List"%>
+<%@page import="org.hibernate.query.Query"%>
+<%@page import="javax.persistence.criteria.Root"%>
+<%@page import="javax.persistence.criteria.CriteriaQuery"%>
+<%@page import="javax.persistence.criteria.CriteriaBuilder"%>
+<%@page import="com.flyaway.table.FlightRegistry"%>
 <%@page import="com.flyaway.table.Customer"%>
 <%@page import="com.flyaway.table.Flights"%>
 <%@page import="com.flyaway.util.HibernateUtil"%>
@@ -28,7 +34,8 @@ body { background: #0d3188;}.table_detail {background: #fff;}
 	int customerid = (int) request.getSession().getAttribute("customer_Id");
 	Session se = HibernateUtil.getsessionFactory().openSession();
 	Customer c = se.load(Customer.class,customerid);
-	
+	//Flights fl = se.load(Flights.class, customerid);
+	FlightRegistry fr = se.load(FlightRegistry.class, customerid);
 	request.getSession().setAttribute("customer_email", c.getEmail());
 %>
 
@@ -64,6 +71,46 @@ body { background: #0d3188;}.table_detail {background: #fff;}
 								 </td>
 						    	</tr>
 						</table>
+						
+						 <table class="table table-striped table-hover table_detail roundedCorner tbl_info" style="margin-top:15px">
+						 
+						 <tr> <td colspan="5"><h3>My Booking Details</h3></td> </tr>
+						 <tr class="tbl_header">
+						 <td>Departure City</td>
+						 <td>Arrival City</td>
+						 <td>Airline</td>
+						 <td>Travel Date</td>
+						 <td>Booking Status</td>
+						 </tr>
+						
+						 <%
+						 CriteriaBuilder cb = se.getCriteriaBuilder();
+						 CriteriaQuery<FlightRegistry> cr = cb.createQuery(FlightRegistry.class);
+						 Root<FlightRegistry> root = cr.from(FlightRegistry.class);
+						 
+						cr.select(root).where(cb.equal(root.get("customer"), customerid));
+						 Query<FlightRegistry> query = se.createQuery(cr);
+
+						List<FlightRegistry> frs = query.getResultList();
+						 for(FlightRegistry frlist : frs){
+						 
+						 %>
+						 <tr>		
+						<td><%=frlist.getFlight().getDepartCity() %></td>
+						<td><%=frlist.getFlight().getArriveCity() %></td>
+						<td><%=frlist.getFlight().getAirlineName() %> &nbsp;(<%=frlist.getFlight().getFlightNo() %>)</td>
+						<td><%=frlist.getFlight().getDate() %></td>
+						<td>Confirmed</td>		 
+						</tr>   	
+						    	
+						 <%
+						 }
+						 %>
+						</table>
+						
+						<%
+						se.close();
+						%>
 	
 </body>
 </html>

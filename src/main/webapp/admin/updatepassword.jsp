@@ -11,7 +11,7 @@
 <title>Change password</title>
 <link href="../css/style.css" rel="stylesheet" />
 </head>
-<body class="updatepassword">
+<body class="updatepassword" class="bg_darkBlue">
 <jsp:include page="adminmenu.jsp"></jsp:include>
 
 		<%
@@ -48,7 +48,7 @@
 </section>
 
 
-<table class="container table_detail roundedCorner box_shadow">
+<table class="container table_detail roundedCorner box_shadow bg_white">
 		<tr>
 			<td>
 				<h3>Update password</h3>
@@ -64,6 +64,17 @@
 			</td>
 		</tr>
 	</table>
+	
+	<div class="alert alert-info" role="alert">
+<p style="text-align: left; font-weight:600; ">New password must have -</p>
+<ul>
+	<li>At least 8 characters long</li>
+	<li>Contains at least one digit</li>
+	<li>Contains at least one lower alpha char and one upper alpha char</li>
+	<li>Contains at least one char within a set of special chars (@#%$^ etc.)</li>
+	<li>Does not contain space, tab, etc.</li>
+</ul>
+	</div>
 
 </body>
 </html>

@@ -106,7 +106,7 @@ public class Login extends HttpServlet {
 //			rd.include(request, response);
 //			PrintWriter out = response.getWriter();
 //			out.print("<span class='alert alert-danger'>Invalid username or password. Please try again. </span>");
-			response.sendRedirect("login.jsp?error=");
+			response.sendRedirect("login.jsp?error=err03");
 		}
 		
 		se.close();

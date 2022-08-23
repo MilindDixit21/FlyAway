@@ -17,7 +17,7 @@
 <title>List all flights</title>
 <link href="../css/style.css" rel="stylesheet" />
 <style type="text/css">
-body {background: #0d3188;} .table_detail{background: #fff;}
+body {background: #0d3188;}
 </style>
 </head>
 <body id="listallflights">
@@ -45,7 +45,7 @@ Admin adminlogin = se.load(Admin.class, adminid);
 se.close();
 %> 
 
-<table class="container table_detail roundedCorner box_shadow">
+<table class="container table_detail roundedCorner box_shadow bg_white tbl_info">
 <tr> <td colspan="7"><a href="addflight.jsp" class="pagelink">add flight</a><h3>Flight Listings!</h3></td> </tr>
 <tr class="tbl_header">
 <td>Flight No.</td>

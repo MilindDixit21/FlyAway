@@ -80,8 +80,10 @@ public class FormValidator {
 			return false;
 		}
 	}
+	
+	// regex password pattern explained - https://stackoverflow.com/questions/3802192/regexp-java-for-password-validation
 	public static boolean isPassword(String string) {
-		Pattern pat = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{5,}$");
+		Pattern pat = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
 		if(string!=null) {
 			if(pat.matcher(string).matches()&&notBlank(string)) {
 				return true;

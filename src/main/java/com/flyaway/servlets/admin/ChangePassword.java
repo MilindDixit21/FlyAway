@@ -64,7 +64,7 @@ public class ChangePassword extends HttpServlet {
 				Transaction transaction = se.beginTransaction();
 				se.save(user);
 				transaction.commit();
-				response.sendRedirect("admin/dashboard.jsp?success=1");
+				response.sendRedirect("admin/dashboard.jsp?success=password");
 				
 				}
 				else {
